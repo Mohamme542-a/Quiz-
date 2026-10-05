@@ -1063,19 +1063,7 @@ def start_keepalive():
     threading.Thread(target=srv.serve_forever, daemon=True).start()
     log.info("keep-alive على المنفذ %s", port)
 
-from flask import Flask
-import threading
-import os
 
-web_app = Flask(__name__)
-@web_app.route('/')
-def home(): return "Bot is Running! 🚀"
-
-def run_web():
-    port = int(os.environ.get("PORT", 8080))
-    web_app.run(host='0.0.0.0', port=port)
-
-threading.Thread(target=run_web, daemon=True).start()
 def main():
     global store
     if not BOT_TOKEN:
