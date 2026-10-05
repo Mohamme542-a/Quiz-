@@ -34,10 +34,10 @@ from telegram.ext import (Application, ApplicationHandlerStop, CallbackQueryHand
 def _ids(s):
     return [int(x) for x in re.split(r"[,\s]+", s or "") if x.strip().lstrip("-").isdigit()]
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "")            # أو: BOT_TOKEN = "123456:ABC..."
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8876836562:AAEVyAwsXLXf0aYDQe6RD2UK7t_goYKCi3U")            # أو: BOT_TOKEN = "123456:ABC..."
 ADMIN_IDS = [
     # 123456789,      ← اكتب أيدي الأدمن هنا (أو استخدم متغير البيئة ADMIN_IDS)
-] + _ids(os.getenv("ADMIN_IDS", ""))
+] + _ids(os.getenv("ADMIN_IDS", "8950382997"))
 
 DATA_DIR = os.getenv("DATA_DIR", "data")          # مجلد حفظ الأسئلة والنتائج
 AUTO_BACKUP_HOURS = 24                            # إرسال نسخة احتياطية تلقائية للأدمن كل كم ساعة
